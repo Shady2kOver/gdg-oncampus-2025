@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neuro-Divergent Study Helper</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="font-weight: 700;">Neuro-Divergent Study Helper</h1>
+        <div id="pomodoro">
+            <h2 style="font-weight: 500;">Pomodoro Timer</h2>
+            <div id="timer">25:00</div>
+            <button id="start">Start</button>
+            <button id="reset">Reset</button>
+        </div>
+        <div class="separator"></div>
+        <div id="upload">
+            <h2 style="font-weight: 500;">Upload Document</h2>
+            <button id="uploadButton">Choose File</button>
+            <p class="subheading">View documents in an ADHD-Friendly Manner</p>
+        </div>
+        <div id="documentDisplay" style="display:none;">
+            <h2 style="font-weight: 500;">Document Preview</h2>
+            <div id="documentContent"></div>
+            <label>
+                <input type="checkbox" id="boldFirstLetter" /> Bold First Letter of Each Word
+            </label>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
