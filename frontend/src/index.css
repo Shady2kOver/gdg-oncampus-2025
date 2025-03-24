@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color-scheme: light;
+    @apply text-gray-900 bg-cyan-50;
+  }
+
+  body {
+    @apply min-h-screen m-0 p-6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-montserrat;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-2 rounded-md transition-all duration-200 font-medium;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary text-white hover:bg-primary-dark 
+           disabled:bg-primary-light disabled:cursor-not-allowed
+           focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply btn bg-gray-100 text-gray-700 hover:bg-gray-200
+           disabled:bg-gray-50 disabled:text-gray-400 disabled:cursor-not-allowed
+           focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-offset-2;
+  }
+
+  .card {
+    @apply bg-white p-6 rounded-lg shadow-lg border border-primary/10;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-2 border rounded-lg 
+           focus:outline-none focus:ring-2 focus:ring-primary/50
+           disabled:bg-gray-50 disabled:cursor-not-allowed;
+  }
+
+  .checkbox-label {
+    @apply flex items-center space-x-2 cursor-pointer;
+  }
+
+  .checkbox {
+    @apply w-4 h-4 text-primary;
+  }
+}
